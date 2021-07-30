@@ -28,6 +28,18 @@ const todoItems = [
     description: "Write article on how to use Django with React",
     completed: false,
   },
+  {
+    id: 5,
+    title: "Chores",
+    description: "Do house chores",
+    completed: false,
+  },
+  {
+    id: 6,
+    title: "Call Carpenter",
+    description: "Call Carpenter to come fix the rain problem",
+    completed: false,
+  },
 ]
 
 class App extends Component {
