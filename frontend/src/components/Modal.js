@@ -8,7 +8,7 @@ import {
     Form,
     FormGroup,
     Input,
-    Lable,
+    Label,
 } from 'reactstrap';
 
 export default class CustomModal extends Component{
@@ -26,7 +26,7 @@ export default class CustomModal extends Component{
             value = e.target.checked;
         }
         const activeItem = { ...this.state.activeItem, [name]: value};
-        this.setState([activeItem])
+        this.setState({activeItem})
     }
 
     render(){
