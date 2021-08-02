@@ -55,7 +55,7 @@ export default class CustomModal extends Component{
                                 id="todo-description"
                                 name="description"
                                 value={this.state.activeItem.description}
-                                onChange={this.state.activeItem.description}
+                                onChange={this.handleChange}
                                 placeholder="Enter Todo description"
                                 />
                         </FormGroup>
