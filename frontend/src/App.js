@@ -81,8 +81,13 @@ class App extends Component {
       axios
         .put(`/api/todos/${item.id}/`, item)
         .then((res)=>this.refreshList())
+        alert("todo changed" + JSON.stringify(item));
+      return
     }
-    alert("save" + JSON.stringify(item));
+      axios
+        .post(`/api/todos/`, item)
+        .then((res)=> this.refreshList())
+        alert("new item" + JSON.stringify(item));
   }
 
   handleDelete = (item)=>{
@@ -94,7 +99,7 @@ class App extends Component {
 
   createItem=()=>{
     const item= {title: "", description:"", completed:false};
-    this.setState({activeItem:item, modal: !this.state.modal})
+    this.setState({activeItem:item, modal: !this.state.modal});
   }
 
   editItem = (item) =>{
